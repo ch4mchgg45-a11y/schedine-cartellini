@@ -1,0 +1,17 @@
+# Pubblico solo quello che serve alla pagina e all'analisi automatica
+/*
+!/.gitignore
+!/.github/
+!/docs/
+!/README.md
+!/settimanale.py
+!/aia.py
+!/backtest.py
+!/cartellini_corner.py
+!/cartellini_v2.py
+!/dati/
+/dati/*
+!/dati/I1_*.csv
+!/dati/storico_cartellini.csv
+!/dati/designazioni_aia.csv
+!/dati/previsioni_pubblicate.csv

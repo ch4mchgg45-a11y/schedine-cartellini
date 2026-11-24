@@ -1,0 +1,741 @@
+{
+ "aggiornato": "2026-11-24T10:13+00:00",
+ "stagione": "2026/27",
+ "giornata": 12,
+ "designazioni_pubblicate": "18/11/2026",
+ "variazioni": [
+  {
+   "partita": "NAPOLI - TORINO",
+   "prima": "RAPUANO",
+   "dopo": "DI BELLO",
+   "pubblicata": "20/11/2026"
+  }
+ ],
+ "errore_aia": null,
+ "margine_sicurezza_%": 5,
+ "partite": [
+  {
+   "data": "2026-11-21",
+   "ora": "15:00",
+   "casa": "Como",
+   "ospite": "Cagliari",
+   "arbitro": "Andrea Calzavara",
+   "arbitro_partite": 5,
+   "arbitro_fattore": 0.85,
+   "arbitro_media_cartellini": 2.4,
+   "attesi_squadre": 3.58,
+   "attesi": 2.84,
+   "squilibrio": 0.51,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 53.4,
+      "giusta": 1.87,
+      "minima": 1.97
+     },
+     "under": {
+      "prob": 46.6,
+      "giusta": 2.15,
+      "minima": 2.25
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 31.9,
+      "giusta": 3.14,
+      "minima": 3.3
+     },
+     "under": {
+      "prob": 68.1,
+      "giusta": 1.47,
+      "minima": 1.54
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 16.5,
+      "giusta": 6.06,
+      "minima": 6.36
+     },
+     "under": {
+      "prob": 83.5,
+      "giusta": 1.2,
+      "minima": 1.26
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 7.5,
+      "giusta": 13.26,
+      "minima": 13.93
+     },
+     "under": {
+      "prob": 92.5,
+      "giusta": 1.08,
+      "minima": 1.14
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 0,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-21",
+   "ora": "15:00",
+   "casa": "Lazio",
+   "ospite": "Lecce",
+   "arbitro": "Matteo Marcenaro",
+   "arbitro_partite": 53,
+   "arbitro_fattore": 1.03,
+   "arbitro_media_cartellini": 4.29,
+   "attesi_squadre": 4.61,
+   "attesi": 4.41,
+   "squilibrio": 0.53,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 80.7,
+      "giusta": 1.24,
+      "minima": 1.3
+     },
+     "under": {
+      "prob": 19.3,
+      "giusta": 5.17,
+      "minima": 5.43
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 63.4,
+      "giusta": 1.58,
+      "minima": 1.66
+     },
+     "under": {
+      "prob": 36.6,
+      "giusta": 2.73,
+      "minima": 2.87
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 44.8,
+      "giusta": 2.23,
+      "minima": 2.34
+     },
+     "under": {
+      "prob": 55.2,
+      "giusta": 1.81,
+      "minima": 1.9
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 28.5,
+      "giusta": 3.5,
+      "minima": 3.68
+     },
+     "under": {
+      "prob": 71.5,
+      "giusta": 1.4,
+      "minima": 1.47
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 3,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-21",
+   "ora": "18:00",
+   "casa": "Parma",
+   "ospite": "Roma",
+   "arbitro": "Simone Sozza",
+   "arbitro_partite": 83,
+   "arbitro_fattore": 0.97,
+   "arbitro_media_cartellini": 3.88,
+   "attesi_squadre": 3.58,
+   "attesi": 3.19,
+   "squilibrio": 0.61,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 60.9,
+      "giusta": 1.64,
+      "minima": 1.72
+     },
+     "under": {
+      "prob": 39.1,
+      "giusta": 2.56,
+      "minima": 2.68
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 39.3,
+      "giusta": 2.54,
+      "minima": 2.67
+     },
+     "under": {
+      "prob": 60.7,
+      "giusta": 1.65,
+      "minima": 1.73
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 22.2,
+      "giusta": 4.51,
+      "minima": 4.74
+     },
+     "under": {
+      "prob": 77.8,
+      "giusta": 1.28,
+      "minima": 1.35
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 11.1,
+      "giusta": 9.03,
+      "minima": 9.48
+     },
+     "under": {
+      "prob": 88.9,
+      "giusta": 1.12,
+      "minima": 1.18
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 1,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-21",
+   "ora": "20:45",
+   "casa": "Napoli",
+   "ospite": "Torino",
+   "arbitro": "Marco Di Bello",
+   "arbitro_partite": 136,
+   "arbitro_fattore": 0.84,
+   "arbitro_media_cartellini": 2.89,
+   "attesi_squadre": 2.76,
+   "attesi": 2.17,
+   "squilibrio": 0.44,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 36.7,
+      "giusta": 2.72,
+      "minima": 2.86
+     },
+     "under": {
+      "prob": 63.3,
+      "giusta": 1.58,
+      "minima": 1.66
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 18.0,
+      "giusta": 5.57,
+      "minima": 5.84
+     },
+     "under": {
+      "prob": 82.0,
+      "giusta": 1.22,
+      "minima": 1.28
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 7.6,
+      "giusta": 13.24,
+      "minima": 13.9
+     },
+     "under": {
+      "prob": 92.4,
+      "giusta": 1.08,
+      "minima": 1.14
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 2.8,
+      "giusta": 35.84,
+      "minima": 37.64
+     },
+     "under": {
+      "prob": 97.2,
+      "giusta": 1.03,
+      "minima": 1.08
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 3,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-22",
+   "ora": "12:30",
+   "casa": "Juventus",
+   "ospite": "Venezia",
+   "arbitro": "Alberto Ruben Arena",
+   "arbitro_partite": 16,
+   "arbitro_fattore": 0.77,
+   "arbitro_media_cartellini": 2.75,
+   "attesi_squadre": 3.07,
+   "attesi": 2.16,
+   "squilibrio": 0.62,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 36.6,
+      "giusta": 2.73,
+      "minima": 2.87
+     },
+     "under": {
+      "prob": 63.4,
+      "giusta": 1.58,
+      "minima": 1.66
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 17.9,
+      "giusta": 5.59,
+      "minima": 5.87
+     },
+     "under": {
+      "prob": 82.1,
+      "giusta": 1.22,
+      "minima": 1.28
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 7.5,
+      "giusta": 13.31,
+      "minima": 13.97
+     },
+     "under": {
+      "prob": 92.5,
+      "giusta": 1.08,
+      "minima": 1.14
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 2.8,
+      "giusta": 36.08,
+      "minima": 37.88
+     },
+     "under": {
+      "prob": 97.2,
+      "giusta": 1.03,
+      "minima": 1.08
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 0,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-22",
+   "ora": "15:00",
+   "casa": "Bologna",
+   "ospite": "Udinese",
+   "arbitro": "Livio Marinelli",
+   "arbitro_partite": 74,
+   "arbitro_fattore": 0.93,
+   "arbitro_media_cartellini": 3.46,
+   "attesi_squadre": 3.63,
+   "attesi": 3.26,
+   "squilibrio": 0.29,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 62.3,
+      "giusta": 1.6,
+      "minima": 1.68
+     },
+     "under": {
+      "prob": 37.7,
+      "giusta": 2.65,
+      "minima": 2.79
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 40.8,
+      "giusta": 2.45,
+      "minima": 2.57
+     },
+     "under": {
+      "prob": 59.2,
+      "giusta": 1.69,
+      "minima": 1.77
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 23.4,
+      "giusta": 4.27,
+      "minima": 4.49
+     },
+     "under": {
+      "prob": 76.6,
+      "giusta": 1.31,
+      "minima": 1.37
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 11.9,
+      "giusta": 8.41,
+      "minima": 8.83
+     },
+     "under": {
+      "prob": 88.1,
+      "giusta": 1.13,
+      "minima": 1.19
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 3,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-22",
+   "ora": "15:00",
+   "casa": "Sassuolo",
+   "ospite": "Genoa",
+   "arbitro": "Maria Sole Ferrieri Caputi",
+   "arbitro_partite": 17,
+   "arbitro_fattore": 0.87,
+   "arbitro_media_cartellini": 3.25,
+   "attesi_squadre": 4.25,
+   "attesi": 3.68,
+   "squilibrio": 0.05,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 70.2,
+      "giusta": 1.43,
+      "minima": 1.5
+     },
+     "under": {
+      "prob": 29.8,
+      "giusta": 3.35,
+      "minima": 3.52
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 49.7,
+      "giusta": 2.01,
+      "minima": 2.11
+     },
+     "under": {
+      "prob": 50.3,
+      "giusta": 1.99,
+      "minima": 2.09
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 31.1,
+      "giusta": 3.21,
+      "minima": 3.37
+     },
+     "under": {
+      "prob": 68.9,
+      "giusta": 1.45,
+      "minima": 1.52
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 17.3,
+      "giusta": 5.76,
+      "minima": 6.05
+     },
+     "under": {
+      "prob": 82.7,
+      "giusta": 1.21,
+      "minima": 1.27
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 1,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-22",
+   "ora": "18:00",
+   "casa": "Milan",
+   "ospite": "Frosinone",
+   "arbitro": "Luca Pairetto",
+   "arbitro_partite": 130,
+   "arbitro_fattore": 1.05,
+   "arbitro_media_cartellini": 4.81,
+   "attesi_squadre": 4.08,
+   "attesi": 4.1,
+   "squilibrio": 0.29,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 76.6,
+      "giusta": 1.31,
+      "minima": 1.37
+     },
+     "under": {
+      "prob": 23.4,
+      "giusta": 4.27,
+      "minima": 4.49
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 57.8,
+      "giusta": 1.73,
+      "minima": 1.82
+     },
+     "under": {
+      "prob": 42.2,
+      "giusta": 2.37,
+      "minima": 2.49
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 39.0,
+      "giusta": 2.57,
+      "minima": 2.7
+     },
+     "under": {
+      "prob": 61.0,
+      "giusta": 1.64,
+      "minima": 1.72
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 23.5,
+      "giusta": 4.25,
+      "minima": 4.47
+     },
+     "under": {
+      "prob": 76.5,
+      "giusta": 1.31,
+      "minima": 1.37
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 5,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-22",
+   "ora": "20:45",
+   "casa": "Atalanta",
+   "ospite": "Inter",
+   "arbitro": "Fabio Maresca",
+   "arbitro_partite": 136,
+   "arbitro_fattore": 1.15,
+   "arbitro_media_cartellini": 4.67,
+   "attesi_squadre": 2.66,
+   "attesi": 2.93,
+   "squilibrio": 0.32,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 55.4,
+      "giusta": 1.8,
+      "minima": 1.89
+     },
+     "under": {
+      "prob": 44.6,
+      "giusta": 2.24,
+      "minima": 2.35
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 33.8,
+      "giusta": 2.96,
+      "minima": 3.11
+     },
+     "under": {
+      "prob": 66.2,
+      "giusta": 1.51,
+      "minima": 1.59
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 17.9,
+      "giusta": 5.58,
+      "minima": 5.86
+     },
+     "under": {
+      "prob": 82.1,
+      "giusta": 1.22,
+      "minima": 1.28
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 8.4,
+      "giusta": 11.92,
+      "minima": 12.52
+     },
+     "under": {
+      "prob": 91.6,
+      "giusta": 1.09,
+      "minima": 1.15
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 3,
+   "attesi_pubblicati": null
+  },
+  {
+   "data": "2026-11-23",
+   "ora": "20:45",
+   "casa": "Monza",
+   "ospite": "Fiorentina",
+   "arbitro": "Daniele Doveri",
+   "arbitro_partite": 161,
+   "arbitro_fattore": 0.82,
+   "arbitro_media_cartellini": 2.84,
+   "attesi_squadre": 4.4,
+   "attesi": 3.57,
+   "squilibrio": 0.07,
+   "fonte_squilibrio": "modello gol",
+   "derby": false,
+   "linee": [
+    {
+     "linea": 2.5,
+     "over": {
+      "prob": 68.2,
+      "giusta": 1.47,
+      "minima": 1.54
+     },
+     "under": {
+      "prob": 31.8,
+      "giusta": 3.14,
+      "minima": 3.3
+     }
+    },
+    {
+     "linea": 3.5,
+     "over": {
+      "prob": 47.3,
+      "giusta": 2.11,
+      "minima": 2.22
+     },
+     "under": {
+      "prob": 52.7,
+      "giusta": 1.9,
+      "minima": 1.99
+     }
+    },
+    {
+     "linea": 4.5,
+     "over": {
+      "prob": 29.0,
+      "giusta": 3.45,
+      "minima": 3.62
+     },
+     "under": {
+      "prob": 71.0,
+      "giusta": 1.41,
+      "minima": 1.48
+     }
+    },
+    {
+     "linea": 5.5,
+     "over": {
+      "prob": 15.8,
+      "giusta": 6.34,
+      "minima": 6.66
+     },
+     "under": {
+      "prob": 84.2,
+      "giusta": 1.19,
+      "minima": 1.25
+     }
+    }
+   ],
+   "giocata": true,
+   "cartellini_reali": 1,
+   "attesi_pubblicati": null
+  }
+ ],
+ "verifica": null,
+ "media_cartellini_stagione": 3.25,
+ "partite_storico_aggiunte": 0
+}
