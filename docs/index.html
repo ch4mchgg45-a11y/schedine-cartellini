@@ -3,171 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Schedine Cartellini</title>
+<title>Cartellini Serie A</title>
 <meta name="description" content="Quote minime sui cartellini della Serie A, giornata per giornata.">
-<meta name="theme-color" content="#0b0c09">
+<meta name="theme-color" content="#157a45">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Cartellini">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/svg+xml" href="icona.svg">
 <link rel="apple-touch-icon" href="icona-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0b0c09;
-    --panel: #15170f;
-    --panel-2: #1b1e14;
-    --line: #2c3023;
-    --paper: #eeebdc;
-    --dim: #8f927a;
-    --giallo: #f2c230;
-    --giallo-scuro: #3a3112;
-    --verde: #6fcf97;
-    --verde-scuro: #15301f;
-    --rosso: #e0654a;
-    --rosso-scuro: #35180f;
-    --radius: 6px;
+    --erba: #157a45;
+    --erba-scura: #0f5c34;
+    --gesso: #ffffff;
+    --gesso-velato: rgba(255,255,255,.72);
+    --inchiostro: #14281d;
+    --grigio: #5d6b62;
+    --riga: #e3e9e5;
+    --giallo: #ffd21f;
+    --giallo-bordo: #e0b400;
+    --rosso: #d93a26;
+    --rosso-chiaro: #fdecea;
+    --verde-chiaro: #e6f4ec;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: var(--ink); color: var(--paper);
-    font-family: "Space Grotesk", system-ui, sans-serif; font-size: 16px; line-height: 1.45;
-    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+    margin: 0; color: var(--gesso); font-family: "Barlow", system-ui, sans-serif; font-size: 16px; line-height: 1.5;
+    background-color: var(--erba);
+    /* strisce del prato tagliato */
+    background-image: repeating-linear-gradient(180deg, transparent 0 140px, rgba(0,0,0,.045) 140px 280px);
+    min-height: 100vh;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 20px 16px 48px; }
-  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
-  header { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
-  .cartellino { width: 22px; height: 30px; background: var(--giallo); border-radius: 3px; transform: rotate(-8deg); flex: none;
-    box-shadow: 0 0 0 1px #00000040, 0 6px 18px #f2c23033; }
-  h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; }
-  .sub { color: var(--dim); font-size: 13px; margin: 2px 0 18px; }
-  .stato { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; font-size: 14px; }
-  .stato b { color: var(--giallo); font-weight: 600; }
-  .avviso { border-color: var(--giallo); background: var(--giallo-scuro); }
-  .errore { border-color: var(--rosso); background: var(--rosso-scuro); }
-  details.guida { border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 20px; font-size: 14px; color: var(--dim); }
-  details.guida summary { color: var(--paper); cursor: pointer; font-weight: 500; }
-  details.guida ol { padding-left: 18px; margin: 10px 0 4px; }
-  details.guida li { margin-bottom: 6px; }
-  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dim); font-weight: 600; margin: 28px 0 10px; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
-  .card.giocata { opacity: 0.72; }
-  .riga1 { display: flex; justify-content: space-between; gap: 8px; color: var(--dim); font-size: 12px; }
-  .partita { font-size: 19px; font-weight: 600; margin: 4px 0 8px; letter-spacing: -0.01em; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .tag { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--paper); background: var(--panel-2); }
-  .tag.perm { border-color: #2f6b49; color: var(--verde); }
-  .tag.sev { border-color: #7a3424; color: var(--rosso); }
-  .tag.derby { border-color: var(--giallo); color: var(--giallo); }
-  .attesi { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
-  .attesi .num { font-size: 34px; font-weight: 700; color: var(--giallo); line-height: 1; }
-  .attesi .lbl { font-size: 13px; color: var(--dim); }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th { text-align: left; font-weight: 500; color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 0 0 6px; }
-  th.r, td.r { text-align: right; }
-  td { padding: 7px 0; border-top: 1px solid var(--line); }
-  td .p { color: var(--dim); font-size: 12px; }
-  td .q { font-weight: 600; }
-  .controllo { margin-top: 12px; display: grid; grid-template-columns: 1fr 96px; gap: 8px; }
+  .wrap { max-width: 560px; margin: 0 auto; padding: calc(20px + env(safe-area-inset-top)) 16px calc(40px + env(safe-area-inset-bottom)); }
+
+  /* testata con cerchio di centrocampo */
+  .testata { position: relative; padding: 28px 0 22px; overflow: hidden; }
+  .testata svg.campo { position: absolute; right: -90px; top: -40px; width: 300px; height: 300px; opacity: .22; pointer-events: none; }
+  h1 {
+    font-family: "Barlow Condensed", sans-serif; font-style: italic; font-weight: 800;
+    font-size: 64px; line-height: .9; margin: 0; letter-spacing: -0.01em; position: relative;
+  }
+  .giornata { font-size: 17px; font-weight: 500; margin: 10px 0 0; color: var(--gesso-velato); position: relative; }
+  .giornata strong { color: var(--gesso); font-weight: 700; }
+
+  .annuncio { background: var(--erba-scura); border-radius: 14px; padding: 14px 16px; margin: 0 0 12px; font-size: 15px; }
+  .annuncio.cambio { background: var(--giallo); color: var(--inchiostro); }
+  .annuncio.guasto { background: var(--rosso); }
+
+  details.aiuto { margin: 4px 0 26px; font-size: 15px; color: var(--gesso-velato); }
+  details.aiuto summary { cursor: pointer; color: var(--gesso); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; list-style: none; }
+  details.aiuto summary::-webkit-details-marker { display: none; }
+  details.aiuto p { margin: 10px 0 0; }
+
+  .sezione { font-family: "Barlow Condensed", sans-serif; font-style: italic; font-weight: 700; font-size: 28px; margin: 30px 0 12px; }
+
+  /* scheda partita */
+  .partita { background: var(--gesso); color: var(--inchiostro); border-radius: 20px; padding: 20px 18px 18px; margin-bottom: 16px; box-shadow: 0 2px 0 var(--erba-scura); }
+  .quando { font-size: 14px; color: var(--grigio); font-weight: 500; }
+  .squadre { font-family: "Barlow Condensed", sans-serif; font-style: italic; font-weight: 800; font-size: 34px; line-height: .98; margin: 6px 0 14px; letter-spacing: -0.005em; }
+  .squadre span { display: block; }
+  .squadre .vs { font-size: 18px; font-weight: 700; color: var(--grigio); margin: 2px 0; }
+  .arbitro { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-top: 1px solid var(--riga); border-bottom: 1px solid var(--riga); font-size: 15px; }
+  .arbitro .nome { font-weight: 600; }
+  .arbitro .indole { font-weight: 700; white-space: nowrap; }
+  .indole.poco { color: var(--erba); }
+  .indole.tanto { color: var(--rosso); }
+  .indole.media { color: var(--grigio); }
+  .derby { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 700; color: var(--rosso); }
+
+  /* i cartellini attesi come cartellini veri */
+  .attesi { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0 6px; }
+  .mazzo { display: flex; gap: 6px; align-items: flex-end; flex-wrap: wrap; }
+  .carta { width: 22px; height: 31px; border-radius: 3px; border: 1.5px solid var(--giallo-bordo); position: relative; overflow: hidden; background: #fff7d1; }
+  .carta:nth-child(odd) { transform: rotate(-4deg); }
+  .carta:nth-child(even) { transform: rotate(3deg); }
+  .carta i { position: absolute; left: 0; right: 0; bottom: 0; background: var(--giallo); }
+  .attesi .valore { text-align: right; line-height: 1.1; }
+  .attesi .valore b { font-family: "Barlow Condensed", sans-serif; font-style: italic; font-weight: 800; font-size: 40px; display: block; }
+  .attesi .valore small { font-size: 13px; color: var(--grigio); }
+
+  /* linee */
+  .linee { margin-top: 14px; }
+  .linea { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--riga); }
+  .linea:first-child { border-top: 0; }
+  .lato { font-size: 14px; color: var(--grigio); }
+  .lato strong { display: block; color: var(--inchiostro); font-size: 15px; font-weight: 600; }
+  .lato .q { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 26px; color: var(--inchiostro); line-height: 1.1; }
+  .lato.consigliata .q { color: var(--erba); }
+
+  .prova { margin-top: 14px; background: var(--verde-chiaro); border-radius: 14px; padding: 14px; }
+  .prova label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .prova .campi { display: grid; grid-template-columns: 1fr 100px; gap: 8px; }
   select, input {
-    font: inherit; font-size: 16px; color: var(--paper); background: var(--ink); border: 1px solid var(--line);
-    border-radius: var(--radius); padding: 9px 10px; width: 100%; min-width: 0;
+    font: inherit; font-size: 16px; color: var(--inchiostro); background: var(--gesso); border: 1.5px solid #c9d6ce;
+    border-radius: 10px; padding: 10px 11px; width: 100%; min-width: 0;
   }
-  input:focus, select:focus { outline: 2px solid var(--giallo); outline-offset: 1px; }
-  .verdetto { grid-column: 1 / -1; font-size: 14px; border-radius: var(--radius); padding: 9px 11px; display: none; }
-  .verdetto.si { display: block; background: var(--verde-scuro); color: var(--verde); }
-  .verdetto.no { display: block; background: var(--rosso-scuro); color: var(--rosso); }
-  .risultato { font-size: 14px; margin-top: 8px; }
-  .risultato b { color: var(--giallo); }
-  .ver td { font-size: 13px; }
-  .nota { color: var(--dim); font-size: 13px; }
-  footer { margin-top: 32px; color: var(--dim); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
-  .vuoto { color: var(--dim); text-align: center; padding: 40px 0; }
+  input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--giallo); outline-offset: 2px; }
+  .esito { margin-top: 10px; font-weight: 700; font-size: 15px; border-radius: 10px; padding: 10px 12px; display: none; }
+  .esito.si { display: block; background: var(--erba); color: var(--gesso); }
+  .esito.no { display: block; background: var(--rosso-chiaro); color: var(--rosso); }
+
+  /* partite gia' giocate: tabellone */
+  .tabellone { background: var(--erba-scura); border-radius: 20px; padding: 6px 16px; }
+  .tab-riga { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.14); }
+  .tab-riga:first-child { border-top: 0; }
+  .tab-riga .chi { font-weight: 600; }
+  .tab-riga .chi small { display: block; color: var(--gesso-velato); font-weight: 400; font-size: 13px; }
+  .tab-riga .quanti { display: flex; align-items: center; gap: 8px; font-family: "Barlow Condensed", sans-serif; font-style: italic; font-weight: 800; font-size: 28px; }
+  .tab-riga .quanti .carta { width: 16px; height: 22px; background: var(--giallo); border-color: var(--giallo); transform: rotate(-6deg); }
+  .tab-riga .previsti { font-size: 13px; color: var(--gesso-velato); text-align: right; }
+
+  .bilancio { background: var(--gesso); color: var(--inchiostro); border-radius: 20px; padding: 18px; }
+  .bilancio p { margin: 0 0 10px; }
+  .bilancio .riga-b { display: flex; justify-content: space-between; padding: 8px 0; border-top: 1px solid var(--riga); font-size: 15px; }
+
+  footer { margin-top: 34px; font-size: 14px; color: var(--gesso-velato); }
+  footer p { margin: 0 0 8px; }
+  .vuoto { text-align: center; padding: 60px 0; font-size: 17px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .mazzo .carta { animation: entra .5s cubic-bezier(.2,.8,.2,1) both; }
+    .mazzo .carta:nth-child(2) { animation-delay: .06s; } .mazzo .carta:nth-child(3) { animation-delay: .12s; }
+    .mazzo .carta:nth-child(4) { animation-delay: .18s; } .mazzo .carta:nth-child(5) { animation-delay: .24s; }
+    .mazzo .carta:nth-child(6) { animation-delay: .3s; }
+    @keyframes entra { from { opacity: 0; translate: 0 10px; } }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header><div class="cartellino" aria-hidden="true"></div><h1>Schedine · Cartellini</h1></header>
-  <div class="sub mono" id="sub">Caricamento…</div>
-  <div id="stato"></div>
-  <details class="guida">
-    <summary>Come si usa</summary>
-    <ol>
-      <li>Apri Eurobet sulla partita, sezione <b>Cartellini</b>.</li>
-      <li>Confronta la quota di Eurobet con la <b>quota minima</b> qui sotto, per la stessa linea (es. Under 4.5).</li>
-      <li>Se Eurobet paga <b>almeno</b> la quota minima → c'è valore. Se paga meno → non conviene, anche se è "probabile".</li>
-      <li>Oppure scrivi la quota nel <b>controllo quota</b> sotto ogni partita.</li>
-    </ol>
-    La quota minima è la quota giusta del modello più un margine di sicurezza del 5%. Finché non abbiamo 30-50 giocate finte in attivo, sono giocate di prova.
+  <header class="testata">
+    <svg class="campo" viewBox="0 0 300 300" aria-hidden="true">
+      <circle cx="150" cy="150" r="110" fill="none" stroke="#fff" stroke-width="4"/>
+      <circle cx="150" cy="150" r="6" fill="#fff"/>
+      <line x1="150" y1="0" x2="150" y2="300" stroke="#fff" stroke-width="4"/>
+    </svg>
+    <h1>Cartellini</h1>
+    <p class="giornata" id="giornata">Sto caricando la giornata…</p>
+  </header>
+  <div id="annunci"></div>
+  <details class="aiuto">
+    <summary>Come si legge</summary>
+    <p>Per ogni partita trovi la quota minima di ogni giocata. Apri Eurobet, sezione Cartellini: se Eurobet paga almeno quella cifra, la giocata ha valore. Se paga meno, lascia stare, anche se sembra probabile.</p>
+    <p>La quota minima è la quota giusta del modello più un 5% di sicurezza. Sono giocate di prova finché il bilancio in fondo alla pagina non dimostra un vantaggio.</p>
   </details>
-  <div id="partite"></div>
-  <div id="verifica"></div>
-  <footer id="footer"></footer>
+  <main id="contenuto"></main>
+  <footer id="piede"></footer>
 </div>
 <script>
-const fmt = (n, d = 2) => n == null ? "–" : Number(n).toLocaleString("it-IT", { minimumFractionDigits: d, maximumFractionDigits: d });
+const num = (n, d = 2) => n == null ? "–" : Number(n).toLocaleString("it-IT", { minimumFractionDigits: d, maximumFractionDigits: d });
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const giorno = iso => {
+const titolo = s => esc(String(s).toLowerCase().replace(/(^|[\s'-])\S/g, c => c.toUpperCase()));
+const quando = (iso, ora) => {
   if (!iso) return "";
-  const d = new Date(iso + "T12:00:00");
-  return d.toLocaleDateString("it-IT", { weekday: "short", day: "numeric", month: "short" });
+  const g = new Date(iso + "T12:00:00").toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+  return g.charAt(0).toUpperCase() + g.slice(1) + (ora ? ", ore " + ora.replace(":", ".") : "");
 };
 
-function tagArbitro(p) {
+function indole(p) {
+  if (!p.arbitro_partite) return `<span class="indole media">arbitro nuovo</span>`;
   const pct = Math.round((p.arbitro_fattore - 1) * 100);
-  if (!p.arbitro_partite) return `<span class="tag">arbitro nuovo, nessuno storico</span>`;
-  if (pct <= -8) return `<span class="tag perm">permissivo ${pct}%</span>`;
-  if (pct >= 8) return `<span class="tag sev">severo +${pct}%</span>`;
-  return `<span class="tag">nella media ${pct > 0 ? "+" : ""}${pct}%</span>`;
+  if (pct <= -8) return `<span class="indole poco">fischia poco (${pct}%)</span>`;
+  if (pct >= 8) return `<span class="indole tanto">fischia tanto (+${pct}%)</span>`;
+  return `<span class="indole media">nella media</span>`;
 }
 
-function cardGiocata(p) {
-  const prima = p.attesi_pubblicati != null
-    ? `previsti prima del fischio: <b>${fmt(p.attesi_pubblicati, 1)}</b>` : `<span class="nota">nessuna previsione pubblicata prima</span>`;
-  return `
-  <article class="card giocata">
-    <div class="riga1"><span>${giorno(p.data)}${p.ora ? " · " + p.ora : ""}</span><span>${esc(p.arbitro)}</span></div>
-    <div class="partita" style="font-size:16px;margin-bottom:2px">${esc(p.casa)} – ${esc(p.ospite)}</div>
-    <div class="risultato" style="margin-top:0"><b>${p.cartellini_reali} cartellin${p.cartellini_reali === 1 ? "o" : "i"}</b> · ${prima}</div>
-  </article>`;
+function mazzo(mu) {
+  const pieni = Math.floor(mu), resto = mu - pieni, carte = [];
+  for (let i = 0; i < Math.min(pieni, 7); i++) carte.push(`<span class="carta"><i style="top:0"></i></span>`);
+  if (resto > 0.05 && pieni < 7) carte.push(`<span class="carta"><i style="height:${Math.round(resto * 100)}%"></i></span>`);
+  return `<div class="mazzo" aria-hidden="true">${carte.join("")}</div>`;
 }
 
-function cardPartita(p, i) {
-  if (p.giocata) return cardGiocata(p);
-  const righe = p.linee.map(l => `
-    <tr>
-      <td class="mono">${fmt(l.linea, 1)}</td>
-      <td class="r"><span class="q mono">${fmt(l.over.minima)}</span><br><span class="p">${fmt(l.over.prob, 0)}%</span></td>
-      <td class="r"><span class="q mono">${fmt(l.under.minima)}</span><br><span class="p">${fmt(l.under.prob, 0)}%</span></td>
-    </tr>`).join("");
+function schedaPartita(p, i) {
+  const linee = p.linee.map(l => `
+    <div class="linea">
+      <div class="lato"><strong>Over ${num(l.linea, 1)}</strong>gioca se almeno<div class="q">${num(l.over.minima)}</div>probabilità ${num(l.over.prob, 0)}%</div>
+      <div class="lato"><strong>Under ${num(l.linea, 1)}</strong>gioca se almeno<div class="q">${num(l.under.minima)}</div>probabilità ${num(l.under.prob, 0)}%</div>
+    </div>`).join("");
   const opzioni = p.linee.flatMap(l => [
-    `<option value="${l.linea}|over">Over ${fmt(l.linea, 1)}</option>`,
-    `<option value="${l.linea}|under">Under ${fmt(l.linea, 1)}</option>`]).join("");
-  const risultato = p.giocata
-    ? `<div class="risultato">Finita: <b>${p.cartellini_reali} cartellin${p.cartellini_reali === 1 ? "o" : "i"}</b> (attesi ${fmt(p.attesi, 1)})</div>` : "";
+    `<option value="${l.linea}|over">Over ${num(l.linea, 1)}</option>`,
+    `<option value="${l.linea}|under">Under ${num(l.linea, 1)}</option>`]).join("");
   return `
-  <article class="card ${p.giocata ? "giocata" : ""}">
-    <div class="riga1"><span>${giorno(p.data)}${p.ora ? " · " + p.ora : ""}</span><span>${esc(p.arbitro)}</span></div>
-    <div class="partita">${esc(p.casa)} – ${esc(p.ospite)}</div>
-    <div class="tags">${tagArbitro(p)}${p.derby ? '<span class="tag derby">derby</span>' : ""}</div>
-    <div class="attesi"><span class="num mono">${fmt(p.attesi, 1)}</span>
-      <span class="lbl">cartellini attesi<br>squadre ${fmt(p.attesi_squadre, 1)} → con arbitro ${fmt(p.attesi, 1)}</span></div>
-    <table>
-      <thead><tr><th>Linea</th><th class="r">Over: gioca se ≥</th><th class="r">Under: gioca se ≥</th></tr></thead>
-      <tbody>${righe}</tbody>
-    </table>
-    ${risultato}
-    ${p.giocata ? "" : `
-    <div class="controllo" data-i="${i}">
-      <select aria-label="Giocata">${opzioni}</select>
-      <input inputmode="decimal" placeholder="quota" aria-label="Quota Eurobet">
-      <div class="verdetto" role="status"></div>
-    </div>`}
+  <article class="partita">
+    <div class="quando">${quando(p.data, p.ora)}</div>
+    <div class="squadre"><span>${esc(p.casa)}</span><span class="vs">contro</span><span>${esc(p.ospite)}</span></div>
+    <div class="arbitro"><span class="nome">${esc(p.arbitro)}</span>${indole(p)}</div>
+    ${p.derby ? `<span class="derby">Derby: di solito più cartellini</span>` : ""}
+    <div class="attesi">${mazzo(p.attesi)}
+      <div class="valore"><b>${num(p.attesi, 1)}</b><small>cartellini attesi</small></div></div>
+    <div class="linee">${linee}</div>
+    <div class="prova" data-i="${i}">
+      <label for="q${i}">Hai la quota di Eurobet? Controllala qui</label>
+      <div class="campi">
+        <select aria-label="Giocata">${opzioni}</select>
+        <input id="q${i}" inputmode="decimal" placeholder="es. 1,85">
+      </div>
+      <div class="esito" role="status"></div>
+    </div>
   </article>`;
 }
 
@@ -175,29 +213,35 @@ function controlla(box, partite) {
   const p = partite[box.dataset.i];
   const [linea, lato] = box.querySelector("select").value.split("|");
   const q = parseFloat(box.querySelector("input").value.replace(",", "."));
-  const out = box.querySelector(".verdetto");
-  if (!q || q <= 1) { out.className = "verdetto"; return; }
+  const out = box.querySelector(".esito");
+  if (!q || q <= 1) { out.className = "esito"; return; }
   const l = p.linee.find(x => String(x.linea) === linea)[lato];
   const valore = (q * l.prob / 100 - 1) * 100;
-  const ok = q >= l.minima;
-  out.className = "verdetto " + (ok ? "si" : "no");
-  out.textContent = ok
-    ? `Conviene: valore ${valore >= 0 ? "+" : ""}${fmt(valore, 1)}% (minima ${fmt(l.minima)})`
-    : `Non conviene: ${valore >= 0 ? "+" : ""}${fmt(valore, 1)}%, serve almeno ${fmt(l.minima)}`;
+  if (q >= l.minima) {
+    out.className = "esito si";
+    out.textContent = `Ha valore: circa ${num(valore, 0)}% in più del giusto. Giocabile.`;
+  } else {
+    out.className = "esito no";
+    out.textContent = `Non conviene: Eurobet paga poco. Serve almeno ${num(l.minima)}.`;
+  }
 }
 
-function verifica(v) {
+function tabellone(giocate) {
+  if (!giocate.length) return "";
+  const righe = giocate.map(p => `
+    <div class="tab-riga">
+      <div class="chi">${esc(p.casa)} – ${esc(p.ospite)}<small>${esc(p.arbitro)}</small></div>
+      <div><div class="quanti"><span class="carta"></span>${p.cartellini_reali}</div>
+        <div class="previsti">${p.attesi_pubblicati != null ? "previsti " + num(p.attesi_pubblicati, 1) : "senza previsione"}</div></div>
+    </div>`).join("");
+  return `<h2 class="sezione">Com'è finita</h2><div class="tabellone">${righe}</div>`;
+}
+
+function bilancio(v) {
   if (!v || !v.partite) return "";
-  const ult = (v.ultima || []).map(r => `<tr><td>${esc(r.casa)} – ${esc(r.ospite)}</td><td class="r mono">${fmt(r.attesi, 1)}</td><td class="r mono">${r.reali}</td></tr>`).join("");
-  const lin = (v.linee || []).map(r => `<tr><td>Over ${fmt(r.linea, 1)}</td><td class="r mono">${fmt(r.prob_media_over, 0)}%</td><td class="r mono">${fmt(r["over_reali_%"], 0)}%</td></tr>`).join("");
-  return `
-    <h2>Come sta andando il modello</h2>
-    <div class="card ver">
-      <p class="nota" style="margin-top:0">Su ${v.partite} partite previste prima del fischio: attesi in media <b>${fmt(v.attesi_media, 1)}</b>, veri <b>${fmt(v.reali_media, 1)}</b>.</p>
-      <table><thead><tr><th>Linea</th><th class="r">Previsto</th><th class="r">Successo</th></tr></thead><tbody>${lin}</tbody></table>
-      ${ult ? `<p class="nota">Giornata ${v.ultima_giornata}</p>
-      <table><thead><tr><th>Partita</th><th class="r">Attesi</th><th class="r">Veri</th></tr></thead><tbody>${ult}</tbody></table>` : ""}
-    </div>`;
+  const righe = (v.linee || []).map(r => `<div class="riga-b"><span>Over ${num(r.linea, 1)}</span><span>previsto ${num(r.prob_media_over, 0)}%, successo ${num(r["over_reali_%"], 0)}%</span></div>`).join("");
+  return `<h2 class="sezione">Il modello ci prende?</h2>
+    <div class="bilancio"><p>Su ${v.partite} partite previste prima del fischio: attesi in media ${num(v.attesi_media, 1)} cartellini, veri ${num(v.reali_media, 1)}.</p>${righe}</div>`;
 }
 
 async function avvia() {
@@ -206,38 +250,33 @@ async function avvia() {
     const r = await fetch("dati.json?t=" + Date.now(), { cache: "no-store" });
     d = await r.json();
   } catch (e) {
-    document.getElementById("sub").textContent = "Dati non disponibili";
-    document.getElementById("partite").innerHTML = `<div class="vuoto">Non riesco a caricare i dati. Riprova tra poco.</div>`;
+    document.getElementById("giornata").textContent = "Dati non raggiungibili.";
+    document.getElementById("contenuto").innerHTML = `<p class="vuoto">Controlla la connessione e ricarica la pagina.</p>`;
     return;
   }
-  const agg = new Date(d.aggiornato).toLocaleString("it-IT", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
-  document.getElementById("sub").textContent = `Serie A ${d.stagione} · giornata ${d.giornata ?? "–"} · aggiornato ${agg}`;
+  const agg = new Date(d.aggiornato).toLocaleString("it-IT", { weekday: "long", hour: "2-digit", minute: "2-digit" });
+  document.getElementById("giornata").innerHTML = `Serie A ${esc(d.stagione)}, <strong>${d.giornata ?? "–"}ª giornata</strong><br>aggiornata ${agg}`;
+
   const daGiocare = d.partite.filter(p => !p.giocata);
-  let stato = "";
-  if (d.errore_aia) stato += `<div class="stato errore">Il sito AIA non ha risposto all'ultimo controllo: designazioni non aggiornate. Riprovo al prossimo giro.</div>`;
-  if (daGiocare.length) {
-    stato += `<div class="stato">Designazioni ufficiali della <b>${d.giornata}ª giornata</b> pubblicate il ${esc(d.designazioni_pubblicate)}. ${daGiocare.length} partite da giocare.</div>`;
-  } else {
-    stato += `<div class="stato avviso">La <b>${d.giornata}ª giornata</b> è finita. Le designazioni della prossima escono di solito <b>mercoledì o giovedì</b>: la pagina si aggiorna da sola.</div>`;
-  }
+  const giocate = d.partite.filter(p => p.giocata);
+  let a = "";
+  if (d.errore_aia) a += `<div class="annuncio guasto">Il sito degli arbitri non ha risposto all'ultimo controllo. Riprovo da solo al prossimo giro.</div>`;
+  if (!daGiocare.length) a += `<div class="annuncio">Giornata ${d.giornata} finita. Appena l'AIA pubblica gli arbitri della prossima, di solito mercoledì o giovedì, qui compaiono le quote.</div>`;
   (d.variazioni || []).forEach(v => {
-    const t = s => esc(String(s).toLowerCase().replace(/(^|[\s'-])\S/g, c => c.toUpperCase()));
-    stato += `<div class="stato avviso">Cambio arbitro in <b>${t(v.partita)}</b>: ${t(v.prima)} → ${t(v.dopo)} (${esc(v.pubblicata)}). Quote già ricalcolate.</div>`;
+    a += `<div class="annuncio cambio"><strong>Cambio arbitro in ${titolo(v.partita)}:</strong> ${titolo(v.prima)} sostituito da ${titolo(v.dopo)}. Quote già aggiornate.</div>`;
   });
-  document.getElementById("stato").innerHTML = stato;
-  const ordinate = [...daGiocare, ...d.partite.filter(p => p.giocata)];
-  document.getElementById("partite").innerHTML =
-    (daGiocare.length ? "<h2>Da giocare</h2>" : "<h2>Risultati</h2>") +
-    ordinate.map((p, i) => (i === daGiocare.length && daGiocare.length ? "<h2>Già giocate</h2>" : "") + cardPartita(p, i)).join("");
-  document.querySelectorAll(".controllo").forEach(box => {
-    box.querySelector("input").addEventListener("input", () => controlla(box, ordinate));
-    box.querySelector("select").addEventListener("change", () => controlla(box, ordinate));
+  document.getElementById("annunci").innerHTML = a;
+
+  document.getElementById("contenuto").innerHTML =
+    (daGiocare.length ? `<h2 class="sezione">Da giocare</h2>` + daGiocare.map(schedaPartita).join("") : "") +
+    tabellone(giocate) + bilancio(d.verifica);
+  document.querySelectorAll(".prova").forEach(box => {
+    box.querySelector("input").addEventListener("input", () => controlla(box, daGiocare));
+    box.querySelector("select").addEventListener("change", () => controlla(box, daGiocare));
   });
-  document.getElementById("verifica").innerHTML = verifica(d.verifica);
-  document.getElementById("footer").innerHTML =
-    `Modello: squadre + arbitro + equilibrio partita + derby. Media cartellini stagione: ${fmt(d.media_cartellini_stagione, 2)}.<br>
-     Il margine di Eurobet sui cartellini è circa il 13%: la maggior parte delle quote non conviene, è normale.<br>
-     Giocate di prova finché il registro non dimostra un vantaggio.`;
+  document.getElementById("piede").innerHTML = `
+    <p>Il modello guarda le squadre, l'arbitro, quanto è equilibrata la partita e se è un derby.</p>
+    <p>Su Eurobet il margine sui cartellini è circa il 13%: è normale che la maggior parte delle quote non convenga.</p>`;
 }
 avvia();
 </script>
