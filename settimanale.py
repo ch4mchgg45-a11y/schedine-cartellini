@@ -130,8 +130,9 @@ def main():
                                      r.cartellini_c + r.cartellini_o, atteso(m, r.casa, r.ospite), sq,
                                      int({r.casa, r.ospite} in DERBY)]
         aggiunte += 1
-    storico = storico.sort_values("data").reset_index(drop=True)
-    storico.to_csv(STORICO, index=False)
+    storico = storico.sort_values(["data", "casa"], kind="mergesort").reset_index(drop=True)
+    if aggiunte or not os.path.exists(STORICO):
+        storico.to_csv(STORICO, index=False)
 
     # --- modello: pesi equilibrio/derby e dispersione da tutto lo storico
     fa_hist = fattori_arbitro_passati(storico)
