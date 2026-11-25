@@ -1,10 +1,17 @@
 {
- "aggiornato": "2026-11-25T00:20+00:00",
+ "aggiornato": "2026-11-25T19:02+00:00",
  "stagione": "2026/27",
  "giornata": 12,
- "designazioni_pubblicate": null,
- "variazioni": [],
- "errore_aia": "AIA non raggiungibile: https://www.aia-figc.it/designazioni/can/",
+ "designazioni_pubblicate": "18/11/2026",
+ "variazioni": [
+  {
+   "partita": "NAPOLI - TORINO",
+   "prima": "RAPUANO",
+   "dopo": "DI BELLO",
+   "pubblicata": "20/11/2026"
+  }
+ ],
+ "errore_aia": null,
  "margine_sicurezza_%": 5,
  "partite": [
   {
