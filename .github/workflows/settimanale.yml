@@ -3,8 +3,8 @@ name: Analisi giornata
 on:
   schedule:
     # due volte al giorno (ore UTC): prende designazioni, variazioni e risultati appena escono
-    - cron: "0 9 * * *"
-    - cron: "0 16 * * *"
+    # ogni 2 ore al minuto 23: GitHub ritarda o salta i giri, così almeno uno arriva presto
+    - cron: "23 */2 * * *"
   workflow_dispatch: {}
 
 permissions:
