@@ -2,8 +2,9 @@ name: Analisi giornata
 
 on:
   schedule:
-    # ogni 2 ore al minuto 23: GitHub ritarda o salta i giri, così almeno uno arriva presto
-    - cron: "23 */2 * * *"
+    # alle 10:17 e 17:17 ora italiana (in UTC); fuori orario c'è il tasto "Aggiorna adesso" sulla pagina
+    - cron: "17 9 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch: {}
 
 permissions:

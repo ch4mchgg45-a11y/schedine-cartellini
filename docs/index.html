@@ -133,6 +133,19 @@
     .mazzo .carta:nth-child(6) { animation-delay: .3s; }
     @keyframes entra { from { opacity: 0; translate: 0 10px; } }
   }
+  .aggiorna { margin-top: 14px; position: relative; }
+  .tasto { font: inherit; font-weight: 700; font-size: 16px; color: var(--inchiostro); background: var(--giallo); border: 0; border-radius: 999px; padding: 11px 20px; cursor: pointer; box-shadow: 0 2px 0 var(--giallo-bordo); }
+  .tasto:disabled { opacity: .6; cursor: default; }
+  .tasto.secondario { background: var(--gesso); box-shadow: 0 2px 0 #c9d6ce; }
+  .tasto:focus-visible { outline: 3px solid var(--gesso); outline-offset: 2px; }
+  .stato { display: block; margin-top: 8px; font-size: 14px; color: var(--gesso-velato); min-height: 1.5em; }
+  .chiave { background: var(--gesso); color: var(--inchiostro); border-radius: 20px; padding: 18px; margin: 14px 0 0; font-size: 15px; }
+  .chiave ol { padding-left: 20px; margin: 8px 0 12px; }
+  .chiave li { margin-bottom: 6px; }
+  .chiave a { color: var(--erba); font-weight: 700; }
+  .chiave input { width: 100%; margin: 4px 0 10px; }
+  .chiave .bottoni { display: flex; gap: 10px; flex-wrap: wrap; }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
@@ -145,6 +158,27 @@
     </svg>
     <h1>Cartellini</h1>
     <p class="giornata" id="giornata">Sto caricando la giornata…</p>
+    <div class="aggiorna">
+      <button class="tasto" id="tastoAggiorna" type="button">Aggiorna adesso</button>
+      <span class="stato" id="statoAggiorna" role="status"></span>
+    </div>
+    <div class="chiave" id="boxChiave" hidden>
+      <strong>Serve una chiave, solo la prima volta</strong>
+      <p style="margin:6px 0 0">Il tasto chiede a GitHub di rifare l'analisi. Per farlo serve una chiave tua, che resta salvata solo su questo telefono.</p>
+      <ol>
+        <li>Apri <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">questa pagina di GitHub</a> (accedi se lo chiede).</li>
+        <li>Nome: <em>Tasto cartellini</em>. Scadenza: la più lunga che ti lascia scegliere.</li>
+        <li>In <em>Repository access</em> scegli <em>Only select repositories</em> e poi <em>schedine-cartellini</em>.</li>
+        <li>In <em>Permissions</em>, alla voce <em>Actions</em>, scegli <em>Read and write</em>. Nient'altro.</li>
+        <li>Tocca <em>Generate token</em>, copia la chiave che inizia con <code>github_pat_</code> e incollala qui sotto.</li>
+      </ol>
+      <label for="campoChiave">Chiave</label>
+      <input id="campoChiave" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+      <div class="bottoni">
+        <button class="tasto" id="salvaChiave" type="button">Salva e aggiorna</button>
+        <button class="tasto secondario" id="annullaChiave" type="button">Annulla</button>
+      </div>
+    </div>
   </header>
   <div id="annunci"></div>
   <details class="aiuto">
@@ -254,6 +288,7 @@ async function avvia() {
     document.getElementById("contenuto").innerHTML = `<p class="vuoto">Controlla la connessione e ricarica la pagina.</p>`;
     return;
   }
+  ultimoAggiornamento = d.aggiornato;
   const agg = new Date(d.aggiornato).toLocaleString("it-IT", { weekday: "long", hour: "2-digit", minute: "2-digit" });
   document.getElementById("giornata").innerHTML = `Serie A ${esc(d.stagione)}, <strong>${d.giornata ?? "–"}ª giornata</strong><br>aggiornata ${agg}`;
 
@@ -278,6 +313,54 @@ async function avvia() {
     <p>Il modello guarda le squadre, l'arbitro, quanto è equilibrata la partita e se è un derby.</p>
     <p>Su Eurobet il margine sui cartellini è circa il 13%: è normale che la maggior parte delle quote non convenga.</p>`;
 }
+
+// --- tasto "Aggiorna adesso": fa partire l'analisi su GitHub con la chiave salvata sul telefono
+const REPO = "ch4mchgg45-a11y/schedine-cartellini";
+let ultimoAggiornamento = null;
+const leggiChiave = () => { try { return localStorage.getItem("chiaveGithub") || ""; } catch (e) { return ""; } };
+const scriviChiave = v => { try { v ? localStorage.setItem("chiaveGithub", v) : localStorage.removeItem("chiaveGithub"); } catch (e) {} };
+const tasto = document.getElementById("tastoAggiorna"), stato = document.getElementById("statoAggiorna"), box = document.getElementById("boxChiave");
+
+async function aggiornaAdesso(chiave) {
+  tasto.disabled = true;
+  stato.textContent = "Chiedo a GitHub di rifare l'analisi…";
+  let r;
+  try {
+    r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/settimanale.yml/dispatches`, {
+      method: "POST",
+      headers: { "Authorization": "Bearer " + chiave, "Accept": "application/vnd.github+json" },
+      body: JSON.stringify({ ref: "main" })
+    });
+  } catch (e) { stato.textContent = "Connessione assente, riprova tra poco."; tasto.disabled = false; return; }
+  if (r.status === 401 || r.status === 403 || r.status === 404) {
+    scriviChiave(""); box.hidden = false; tasto.disabled = false;
+    stato.textContent = "GitHub non ha accettato la chiave (scaduta o senza il permesso Actions). Creane una nuova.";
+    return;
+  }
+  if (!r.ok) { stato.textContent = "GitHub non ha risposto bene, riprova tra qualche minuto."; tasto.disabled = false; return; }
+  const prima = ultimoAggiornamento, inizio = Date.now();
+  const attendi = async () => {
+    const sec = Math.round((Date.now() - inizio) / 1000);
+    stato.textContent = `Analisi in corso, di solito ci vogliono 1-2 minuti (${sec} s)…`;
+    try {
+      const d = await (await fetch("dati.json?t=" + Date.now(), { cache: "no-store" })).json();
+      if (d.aggiornato !== prima) { await avvia(); stato.textContent = "Fatto: pagina aggiornata."; tasto.disabled = false; return; }
+    } catch (e) {}
+    if (Date.now() - inizio > 6 * 60 * 1000) { stato.textContent = "GitHub ci sta mettendo più del solito: ricarica la pagina tra qualche minuto."; tasto.disabled = false; return; }
+    setTimeout(attendi, 15000);
+  };
+  setTimeout(attendi, 20000);
+}
+tasto.addEventListener("click", () => {
+  const c = leggiChiave();
+  if (c) aggiornaAdesso(c); else { box.hidden = false; document.getElementById("campoChiave").focus(); }
+});
+document.getElementById("salvaChiave").addEventListener("click", () => {
+  const c = document.getElementById("campoChiave").value.trim();
+  if (!c) { document.getElementById("campoChiave").focus(); return; }
+  scriviChiave(c); document.getElementById("campoChiave").value = ""; box.hidden = true; aggiornaAdesso(c);
+});
+document.getElementById("annullaChiave").addEventListener("click", () => { box.hidden = true; });
 avvia();
 </script>
 </body>
