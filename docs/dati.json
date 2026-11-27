@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-27T00:34+00:00",
+ "aggiornato": "2026-11-27T19:02+00:00",
  "stagione": "2026/27",
  "giornata": 13,
  "designazioni_pubblicate": "26/11/2026",
@@ -17,61 +17,61 @@
    "arbitro_fattore": 1.09,
    "arbitro_media_cartellini": 4.45,
    "attesi_squadre": 3.41,
-   "attesi": 3.5,
-   "squilibrio": 0.38,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.65,
+   "squilibrio": 0.09,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 67.1,
-      "giusta": 1.49,
-      "minima": 1.57
+      "prob": 69.6,
+      "giusta": 1.44,
+      "minima": 1.51
      },
      "under": {
-      "prob": 32.9,
-      "giusta": 3.04,
-      "minima": 3.19
+      "prob": 30.4,
+      "giusta": 3.29,
+      "minima": 3.46
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 46.1,
-      "giusta": 2.17,
-      "minima": 2.28
+      "prob": 49.1,
+      "giusta": 2.04,
+      "minima": 2.14
      },
      "under": {
-      "prob": 53.9,
-      "giusta": 1.85,
-      "minima": 1.95
+      "prob": 50.9,
+      "giusta": 1.96,
+      "minima": 2.06
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 27.8,
-      "giusta": 3.59,
-      "minima": 3.77
+      "prob": 30.5,
+      "giusta": 3.28,
+      "minima": 3.44
      },
      "under": {
-      "prob": 72.2,
-      "giusta": 1.39,
-      "minima": 1.46
+      "prob": 69.5,
+      "giusta": 1.44,
+      "minima": 1.51
      }
     },
     {
      "linea": 5.5,
      "over": {
-      "prob": 14.9,
-      "giusta": 6.69,
-      "minima": 7.02
+      "prob": 16.9,
+      "giusta": 5.91,
+      "minima": 6.21
      },
      "under": {
-      "prob": 85.1,
-      "giusta": 1.18,
-      "minima": 1.23
+      "prob": 83.1,
+      "giusta": 1.2,
+      "minima": 1.26
      }
     }
    ],
@@ -89,46 +89,46 @@
    "arbitro_fattore": 0.84,
    "arbitro_media_cartellini": 3.21,
    "attesi_squadre": 3.67,
-   "attesi": 2.9,
-   "squilibrio": 0.45,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 2.89,
+   "squilibrio": 0.48,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 54.7,
-      "giusta": 1.83,
-      "minima": 1.92
+      "prob": 54.5,
+      "giusta": 1.84,
+      "minima": 1.93
      },
      "under": {
-      "prob": 45.3,
-      "giusta": 2.21,
-      "minima": 2.32
+      "prob": 45.5,
+      "giusta": 2.2,
+      "minima": 2.31
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 33.1,
-      "giusta": 3.02,
-      "minima": 3.17
+      "prob": 32.9,
+      "giusta": 3.04,
+      "minima": 3.2
      },
      "under": {
-      "prob": 66.9,
-      "giusta": 1.5,
-      "minima": 1.57
+      "prob": 67.1,
+      "giusta": 1.49,
+      "minima": 1.56
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 17.4,
-      "giusta": 5.74,
-      "minima": 6.03
+      "prob": 17.2,
+      "giusta": 5.8,
+      "minima": 6.09
      },
      "under": {
-      "prob": 82.6,
+      "prob": 82.8,
       "giusta": 1.21,
       "minima": 1.27
      }
@@ -136,12 +136,12 @@
     {
      "linea": 5.5,
      "over": {
-      "prob": 8.1,
-      "giusta": 12.36,
-      "minima": 12.98
+      "prob": 8.0,
+      "giusta": 12.54,
+      "minima": 13.16
      },
      "under": {
-      "prob": 91.9,
+      "prob": 92.0,
       "giusta": 1.09,
       "minima": 1.14
      }
@@ -161,61 +161,61 @@
    "arbitro_fattore": 0.82,
    "arbitro_media_cartellini": 2.84,
    "attesi_squadre": 4.08,
-   "attesi": 3.2,
-   "squilibrio": 0.29,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.26,
+   "squilibrio": 0.16,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 61.2,
-      "giusta": 1.63,
-      "minima": 1.72
+      "prob": 62.3,
+      "giusta": 1.6,
+      "minima": 1.68
      },
      "under": {
-      "prob": 38.8,
-      "giusta": 2.57,
-      "minima": 2.7
+      "prob": 37.7,
+      "giusta": 2.65,
+      "minima": 2.79
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 39.6,
-      "giusta": 2.53,
-      "minima": 2.65
+      "prob": 40.8,
+      "giusta": 2.45,
+      "minima": 2.57
      },
      "under": {
-      "prob": 60.4,
-      "giusta": 1.66,
-      "minima": 1.74
+      "prob": 59.2,
+      "giusta": 1.69,
+      "minima": 1.77
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 22.4,
-      "giusta": 4.46,
-      "minima": 4.69
+      "prob": 23.4,
+      "giusta": 4.27,
+      "minima": 4.49
      },
      "under": {
-      "prob": 77.6,
-      "giusta": 1.29,
-      "minima": 1.35
+      "prob": 76.6,
+      "giusta": 1.31,
+      "minima": 1.37
      }
     },
     {
      "linea": 5.5,
      "over": {
-      "prob": 11.2,
-      "giusta": 8.91,
-      "minima": 9.35
+      "prob": 11.9,
+      "giusta": 8.41,
+      "minima": 8.84
      },
      "under": {
-      "prob": 88.8,
+      "prob": 88.1,
       "giusta": 1.13,
-      "minima": 1.18
+      "minima": 1.19
      }
     }
    ],
@@ -233,61 +233,61 @@
    "arbitro_fattore": 1.19,
    "arbitro_media_cartellini": 4.9,
    "attesi_squadre": 3.52,
-   "attesi": 3.86,
-   "squilibrio": 0.57,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.82,
+   "squilibrio": 0.63,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 73.0,
-      "giusta": 1.37,
-      "minima": 1.44
+      "prob": 72.5,
+      "giusta": 1.38,
+      "minima": 1.45
      },
      "under": {
-      "prob": 27.0,
-      "giusta": 3.71,
-      "minima": 3.89
+      "prob": 27.5,
+      "giusta": 3.63,
+      "minima": 3.82
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 53.2,
-      "giusta": 1.88,
-      "minima": 1.97
+      "prob": 52.5,
+      "giusta": 1.9,
+      "minima": 2.0
      },
      "under": {
-      "prob": 46.8,
-      "giusta": 2.14,
-      "minima": 2.24
+      "prob": 47.5,
+      "giusta": 2.11,
+      "minima": 2.21
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 34.4,
-      "giusta": 2.91,
-      "minima": 3.05
+      "prob": 33.8,
+      "giusta": 2.96,
+      "minima": 3.11
      },
      "under": {
-      "prob": 65.6,
-      "giusta": 1.52,
-      "minima": 1.6
+      "prob": 66.2,
+      "giusta": 1.51,
+      "minima": 1.59
      }
     },
     {
      "linea": 5.5,
      "over": {
-      "prob": 19.9,
-      "giusta": 5.04,
-      "minima": 5.29
+      "prob": 19.4,
+      "giusta": 5.17,
+      "minima": 5.42
      },
      "under": {
-      "prob": 80.1,
-      "giusta": 1.25,
-      "minima": 1.31
+      "prob": 80.6,
+      "giusta": 1.24,
+      "minima": 1.3
      }
     }
    ],
@@ -305,61 +305,61 @@
    "arbitro_fattore": 1.07,
    "arbitro_media_cartellini": 4.18,
    "attesi_squadre": 3.88,
-   "attesi": 4.13,
-   "squilibrio": 0.0,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 4.07,
+   "squilibrio": 0.12,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 77.1,
-      "giusta": 1.3,
-      "minima": 1.36
+      "prob": 76.2,
+      "giusta": 1.31,
+      "minima": 1.38
      },
      "under": {
-      "prob": 22.9,
-      "giusta": 4.37,
-      "minima": 4.59
+      "prob": 23.8,
+      "giusta": 4.2,
+      "minima": 4.41
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 58.5,
-      "giusta": 1.71,
-      "minima": 1.79
+      "prob": 57.3,
+      "giusta": 1.75,
+      "minima": 1.83
      },
      "under": {
-      "prob": 41.5,
-      "giusta": 2.41,
-      "minima": 2.53
+      "prob": 42.7,
+      "giusta": 2.34,
+      "minima": 2.46
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 39.7,
-      "giusta": 2.52,
-      "minima": 2.65
+      "prob": 38.4,
+      "giusta": 2.6,
+      "minima": 2.73
      },
      "under": {
-      "prob": 60.3,
-      "giusta": 1.66,
-      "minima": 1.74
+      "prob": 61.6,
+      "giusta": 1.62,
+      "minima": 1.7
      }
     },
     {
      "linea": 5.5,
      "over": {
-      "prob": 24.1,
-      "giusta": 4.15,
-      "minima": 4.36
+      "prob": 23.0,
+      "giusta": 4.34,
+      "minima": 4.56
      },
      "under": {
-      "prob": 75.9,
-      "giusta": 1.32,
-      "minima": 1.38
+      "prob": 77.0,
+      "giusta": 1.3,
+      "minima": 1.36
      }
     }
    ],
@@ -377,46 +377,46 @@
    "arbitro_fattore": 0.94,
    "arbitro_media_cartellini": 3.74,
    "attesi_squadre": 3.38,
-   "attesi": 3.02,
-   "squilibrio": 0.39,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.03,
+   "squilibrio": 0.37,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 57.4,
+      "prob": 57.5,
       "giusta": 1.74,
       "minima": 1.83
      },
      "under": {
-      "prob": 42.6,
+      "prob": 42.5,
       "giusta": 2.35,
-      "minima": 2.46
+      "minima": 2.47
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 35.7,
-      "giusta": 2.8,
-      "minima": 2.94
+      "prob": 35.9,
+      "giusta": 2.79,
+      "minima": 2.93
      },
      "under": {
-      "prob": 64.3,
+      "prob": 64.1,
       "giusta": 1.56,
-      "minima": 1.63
+      "minima": 1.64
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 19.4,
-      "giusta": 5.17,
-      "minima": 5.43
+      "prob": 19.5,
+      "giusta": 5.13,
+      "minima": 5.39
      },
      "under": {
-      "prob": 80.6,
+      "prob": 80.5,
       "giusta": 1.24,
       "minima": 1.3
      }
@@ -425,8 +425,8 @@
      "linea": 5.5,
      "over": {
       "prob": 9.3,
-      "giusta": 10.79,
-      "minima": 11.33
+      "giusta": 10.7,
+      "minima": 11.23
      },
      "under": {
       "prob": 90.7,
@@ -449,46 +449,46 @@
    "arbitro_fattore": 0.99,
    "arbitro_media_cartellini": 4.29,
    "attesi_squadre": 4.03,
-   "attesi": 3.59,
-   "squilibrio": 0.77,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.61,
+   "squilibrio": 0.74,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 68.6,
-      "giusta": 1.46,
-      "minima": 1.53
+      "prob": 68.9,
+      "giusta": 1.45,
+      "minima": 1.52
      },
      "under": {
-      "prob": 31.4,
-      "giusta": 3.19,
-      "minima": 3.34
+      "prob": 31.1,
+      "giusta": 3.22,
+      "minima": 3.38
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 47.9,
-      "giusta": 2.09,
-      "minima": 2.19
+      "prob": 48.2,
+      "giusta": 2.07,
+      "minima": 2.18
      },
      "under": {
-      "prob": 52.1,
-      "giusta": 1.92,
-      "minima": 2.01
+      "prob": 51.8,
+      "giusta": 1.93,
+      "minima": 2.03
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 29.4,
-      "giusta": 3.4,
-      "minima": 3.57
+      "prob": 29.8,
+      "giusta": 3.36,
+      "minima": 3.53
      },
      "under": {
-      "prob": 70.6,
+      "prob": 70.2,
       "giusta": 1.42,
       "minima": 1.49
      }
@@ -496,14 +496,14 @@
     {
      "linea": 5.5,
      "over": {
-      "prob": 16.1,
-      "giusta": 6.21,
-      "minima": 6.52
+      "prob": 16.3,
+      "giusta": 6.12,
+      "minima": 6.43
      },
      "under": {
-      "prob": 83.9,
-      "giusta": 1.19,
-      "minima": 1.25
+      "prob": 83.7,
+      "giusta": 1.2,
+      "minima": 1.26
      }
     }
    ],
@@ -521,61 +521,61 @@
    "arbitro_fattore": 1.01,
    "arbitro_media_cartellini": 3.94,
    "attesi_squadre": 3.69,
-   "attesi": 3.64,
-   "squilibrio": 0.18,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 3.6,
+   "squilibrio": 0.26,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 69.5,
-      "giusta": 1.44,
-      "minima": 1.51
+      "prob": 68.8,
+      "giusta": 1.45,
+      "minima": 1.53
      },
      "under": {
-      "prob": 30.5,
-      "giusta": 3.27,
-      "minima": 3.44
+      "prob": 31.2,
+      "giusta": 3.2,
+      "minima": 3.36
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 48.9,
-      "giusta": 2.05,
-      "minima": 2.15
+      "prob": 48.1,
+      "giusta": 2.08,
+      "minima": 2.18
      },
      "under": {
-      "prob": 51.1,
-      "giusta": 1.96,
-      "minima": 2.05
+      "prob": 51.9,
+      "giusta": 1.93,
+      "minima": 2.02
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 30.3,
-      "giusta": 3.3,
-      "minima": 3.46
+      "prob": 29.6,
+      "giusta": 3.38,
+      "minima": 3.55
      },
      "under": {
-      "prob": 69.7,
-      "giusta": 1.44,
-      "minima": 1.51
+      "prob": 70.4,
+      "giusta": 1.42,
+      "minima": 1.49
      }
     },
     {
      "linea": 5.5,
      "over": {
-      "prob": 16.8,
-      "giusta": 5.96,
-      "minima": 6.26
+      "prob": 16.2,
+      "giusta": 6.16,
+      "minima": 6.47
      },
      "under": {
-      "prob": 83.2,
-      "giusta": 1.2,
-      "minima": 1.26
+      "prob": 83.8,
+      "giusta": 1.19,
+      "minima": 1.25
      }
     }
    ],
@@ -593,46 +593,46 @@
    "arbitro_fattore": 1.0,
    "arbitro_media_cartellini": null,
    "attesi_squadre": 2.74,
-   "attesi": 2.61,
-   "squilibrio": 0.36,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 2.63,
+   "squilibrio": 0.29,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 47.8,
-      "giusta": 2.09,
-      "minima": 2.2
+      "prob": 48.5,
+      "giusta": 2.06,
+      "minima": 2.17
      },
      "under": {
-      "prob": 52.2,
-      "giusta": 1.92,
-      "minima": 2.01
+      "prob": 51.5,
+      "giusta": 1.94,
+      "minima": 2.04
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 26.8,
-      "giusta": 3.73,
-      "minima": 3.91
+      "prob": 27.4,
+      "giusta": 3.65,
+      "minima": 3.83
      },
      "under": {
-      "prob": 73.2,
-      "giusta": 1.37,
-      "minima": 1.43
+      "prob": 72.6,
+      "giusta": 1.38,
+      "minima": 1.45
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 13.0,
-      "giusta": 7.69,
-      "minima": 8.07
+      "prob": 13.4,
+      "giusta": 7.47,
+      "minima": 7.85
      },
      "under": {
-      "prob": 87.0,
+      "prob": 86.6,
       "giusta": 1.15,
       "minima": 1.21
      }
@@ -640,12 +640,12 @@
     {
      "linea": 5.5,
      "over": {
-      "prob": 5.6,
-      "giusta": 18.0,
-      "minima": 18.89
+      "prob": 5.8,
+      "giusta": 17.36,
+      "minima": 18.23
      },
      "under": {
-      "prob": 94.4,
+      "prob": 94.2,
       "giusta": 1.06,
       "minima": 1.11
      }
@@ -665,46 +665,46 @@
    "arbitro_fattore": 0.84,
    "arbitro_media_cartellini": 2.89,
    "attesi_squadre": 3.22,
-   "attesi": 2.56,
-   "squilibrio": 0.35,
-   "fonte_squilibrio": "modello gol",
+   "attesi": 2.55,
+   "squilibrio": 0.37,
+   "fonte_squilibrio": "quote 1X2",
    "derby": false,
    "linee": [
     {
      "linea": 2.5,
      "over": {
-      "prob": 46.7,
-      "giusta": 2.14,
-      "minima": 2.25
+      "prob": 46.5,
+      "giusta": 2.15,
+      "minima": 2.26
      },
      "under": {
-      "prob": 53.3,
+      "prob": 53.5,
       "giusta": 1.87,
-      "minima": 1.97
+      "minima": 1.96
      }
     },
     {
      "linea": 3.5,
      "over": {
-      "prob": 25.8,
-      "giusta": 3.87,
-      "minima": 4.07
+      "prob": 25.7,
+      "giusta": 3.89,
+      "minima": 4.09
      },
      "under": {
-      "prob": 74.2,
+      "prob": 74.3,
       "giusta": 1.35,
-      "minima": 1.42
+      "minima": 1.41
      }
     },
     {
      "linea": 4.5,
      "over": {
-      "prob": 12.4,
-      "giusta": 8.1,
-      "minima": 8.5
+      "prob": 12.3,
+      "giusta": 8.15,
+      "minima": 8.56
      },
      "under": {
-      "prob": 87.6,
+      "prob": 87.7,
       "giusta": 1.14,
       "minima": 1.2
      }
@@ -713,8 +713,8 @@
      "linea": 5.5,
      "over": {
       "prob": 5.2,
-      "giusta": 19.23,
-      "minima": 20.19
+      "giusta": 19.4,
+      "minima": 20.37
      },
      "under": {
       "prob": 94.8,
