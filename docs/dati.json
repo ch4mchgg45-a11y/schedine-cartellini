@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-26T15:02+00:00",
+ "aggiornato": "2026-11-27T00:34+00:00",
  "stagione": "2026/27",
  "giornata": 13,
  "designazioni_pubblicate": "26/11/2026",
@@ -25,13 +25,13 @@
     {
      "linea": 2.5,
      "over": {
-      "prob": 67.0,
+      "prob": 67.1,
       "giusta": 1.49,
       "minima": 1.57
      },
      "under": {
-      "prob": 33.0,
-      "giusta": 3.03,
+      "prob": 32.9,
+      "giusta": 3.04,
       "minima": 3.19
      }
     },
@@ -58,7 +58,7 @@
      "under": {
       "prob": 72.2,
       "giusta": 1.39,
-      "minima": 1.45
+      "minima": 1.46
      }
     },
     {
@@ -170,7 +170,7 @@
      "linea": 2.5,
      "over": {
       "prob": 61.2,
-      "giusta": 1.64,
+      "giusta": 1.63,
       "minima": 1.72
      },
      "under": {
@@ -210,7 +210,7 @@
      "over": {
       "prob": 11.2,
       "giusta": 8.91,
-      "minima": 9.36
+      "minima": 9.35
      },
      "under": {
       "prob": 88.8,
@@ -642,7 +642,7 @@
      "over": {
       "prob": 5.6,
       "giusta": 18.0,
-      "minima": 18.9
+      "minima": 18.89
      },
      "under": {
       "prob": 94.4,
@@ -699,12 +699,12 @@
     {
      "linea": 4.5,
      "over": {
-      "prob": 12.3,
+      "prob": 12.4,
       "giusta": 8.1,
       "minima": 8.5
      },
      "under": {
-      "prob": 87.7,
+      "prob": 87.6,
       "giusta": 1.14,
       "minima": 1.2
      }
@@ -713,8 +713,8 @@
      "linea": 5.5,
      "over": {
       "prob": 5.2,
-      "giusta": 19.24,
-      "minima": 20.2
+      "giusta": 19.23,
+      "minima": 20.19
      },
      "under": {
       "prob": 94.8,
