@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-27T19:02+00:00",
+ "aggiornato": "2026-11-28T00:02+00:00",
  "stagione": "2026/27",
  "giornata": 13,
  "designazioni_pubblicate": "26/11/2026",
@@ -112,7 +112,7 @@
      "over": {
       "prob": 32.9,
       "giusta": 3.04,
-      "minima": 3.2
+      "minima": 3.19
      },
      "under": {
       "prob": 67.1,
@@ -210,7 +210,7 @@
      "over": {
       "prob": 11.9,
       "giusta": 8.41,
-      "minima": 8.84
+      "minima": 8.83
      },
      "under": {
       "prob": 88.1,
@@ -230,7 +230,7 @@
    "ospite": "Genoa",
    "arbitro": "Giovanni Ayroldi",
    "arbitro_partite": 65,
-   "arbitro_fattore": 1.19,
+   "arbitro_fattore": 1.18,
    "arbitro_media_cartellini": 4.9,
    "attesi_squadre": 3.52,
    "attesi": 3.82,
@@ -282,7 +282,7 @@
      "over": {
       "prob": 19.4,
       "giusta": 5.17,
-      "minima": 5.42
+      "minima": 5.43
      },
      "under": {
       "prob": 80.6,
@@ -424,12 +424,12 @@
     {
      "linea": 5.5,
      "over": {
-      "prob": 9.3,
-      "giusta": 10.7,
+      "prob": 9.4,
+      "giusta": 10.69,
       "minima": 11.23
      },
      "under": {
-      "prob": 90.7,
+      "prob": 90.6,
       "giusta": 1.1,
       "minima": 1.16
      }
@@ -629,7 +629,7 @@
      "over": {
       "prob": 13.4,
       "giusta": 7.47,
-      "minima": 7.85
+      "minima": 7.84
      },
      "under": {
       "prob": 86.6,
@@ -642,7 +642,7 @@
      "over": {
       "prob": 5.8,
       "giusta": 17.36,
-      "minima": 18.23
+      "minima": 18.22
      },
      "under": {
       "prob": 94.2,
